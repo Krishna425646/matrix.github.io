@@ -11,15 +11,15 @@
       --card:#ffffff;
       --text:#111827;
       --muted:#6b7280;
-      --accent:#1e40af; /* blue */
+      --accent:#1e40af;
       --link:#1d4ed8;
       --border:rgba(17,24,39,0.06);
       --radius:12px;
       --pad-sm:12px;
       --pad-md:20px;
       --pad-lg:28px;
-      --shadow: 0 6px 18px rgba(16,24,40,0.06);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --shadow:0 6px 18px rgba(16,24,40,0.06);
+      font-family: Inter, Arial, sans-serif;
     }
 
     @media (prefers-color-scheme: dark){
@@ -30,106 +30,221 @@
         --muted:#9aa7c7;
         --accent:#3a7bff;
         --link:#60a5fa;
-        --border:rgba(255,255,255,0.04);
-        --shadow: 0 6px 30px rgba(2,6,23,0.7);
+        --border:rgba(255,255,255,0.08);
+        --shadow:0 6px 30px rgba(2,6,23,0.7);
       }
     }
 
-    html,body{height:100%;}
     body{
       margin:0;
-      background:linear-gradient(180deg,var(--bg),var(--bg));
+      background:var(--bg);
       color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:32px;
-      box-sizing:border-box;
+      padding:30px;
     }
 
-    .container{
-      max-width:920px;
-      margin:0 auto;
-    }
+    .container{ max-width:900px; margin:auto; }
 
-    header{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:18px;
-    }
-    .logo {
-      width:56px; height:56px;
-      border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),var(--link));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:white;
-      font-weight:700;
-      box-shadow:var(--shadow);
-      flex:none;
-    }
-    h1{ margin:0; font-size:20px; letter-spacing:0.2px; }
-    p.lead{ margin:6px 0 0; color:var(--muted); font-size:14px; }
-
-    .card {
+    .card{
       background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      border:1px solid var(--border);
-      margin-bottom:14px;
       padding:var(--pad-md);
+      margin-bottom:16px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+
+    h1{
+      font-size:24px;
+      margin-bottom:4px;
+      color:var(--accent);
     }
 
     .section-title{
-      color:var(--accent);
+      font-size:18px;
       font-weight:700;
-      font-size:16px;
+      color:var(--accent);
       margin:0 0 10px 0;
     }
-    .text{ color:var(--text); line-height:1.65; font-size:15px; margin:0 0 10px 0; }
-    ul.pts{ padding-left:20px; margin:6px 0 10px 0; color:var(--text); }
-    ul.pts li{ margin:6px 0; }
 
-    a.link{ color:var(--link); text-decoration:underline; cursor:pointer; }
-    a.link:hover{ opacity:0.9; }
+    .text{
+      font-size:15px;
+      line-height:1.65;
+      margin-bottom:12px;
+    }
 
-    /* small helpers */
-    .muted{ color:var(--muted); font-size:13px; }
-    .steps{ padding-left:18px; margin:6px 0 0 0; }
-    .steps li{ margin:8px 0; }
+    ul{
+      margin:6px 0 10px 22px;
+      padding:0;
+      line-height:1.65;
+      font-size:15px;
+    }
 
-    /* responsive */
-    @media (max-width:600px){
-      body{ padding:18px; }
-      .container{ padding:0 6px; }
-      .logo{ width:48px; height:48px; }
+    a.link{
+      color:var(--link);
+      text-decoration:underline;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
+<div class="container">
 
-    <header>
-      <div class="logo">M</div>
-      <div>
-        <h1>Privacy Policy — METRIX</h1>
-        <p class="lead">This page explains how METRIX collects, uses, maintains and discloses information collected from users.</p>
-      </div>
-    </header>
+  <h1>Privacy Policy for METRIX Crypto Exchange App</h1>
 
-    <!-- Intro -->
-    <section class="card">
-      <p class="text">
-        This Privacy Policy governs the manner in which <strong>Metrix</strong> collects, uses, maintains and discloses information collected from users (each, a “User”) of the
-        <a class="link" href="https://metrix.trade" target="_blank" rel="noopener">https://metrix.trade</a> website (“Site”). To provide you with our Services, we might need (and sometimes be obliged by law) to collect your personal data.
-      </p>
+  <!-- Section 1 -->
+  <div class="card">
+    <p class="text">
+      This Privacy Policy governs the manner in which Metrix collects, uses, maintains 
+      and discloses information collected from users (each, a “User”) of the 
+      <a href="https://metrix.trade" class="link" target="_blank">https://metrix.trade</a> 
+      website (“Site”).
+    </p>
 
-      <p class="muted">We strictly follow industry best practices and adhere to rules such as GDPR, OPPA, CAN-SPAM and COPPA where applicable. This policy applies to the Site and all Services offered by Metrix.</p>
-    </section>
+    <p class="text">
+      We strictly follow industry best practices and adhere to the rules set forth in GDPR, OPPA, CAN-SPAM and COPPA. 
+      This privacy policy applies to the Site and all Services offered by Metrix.
+    </p>
+  </div>
 
-    <!-- Personal identification -->
-    <section class="card">
-      <div class="section-title">Personal identification information</div>
-      <p class="text">
-        We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, register on the site, place an order, and in connection with
+  <!-- Personal Info -->
+  <div class="card">
+    <div class="section-title">Personal identification information</div>
+    <p class="text">
+      We may collect personal identification information from Users when they visit our site, register, 
+      place an order, or perform related activities. Users may be asked for:
+    </p>
+    <ul>
+      <li>Name</li>
+      <li>Email address</li>
+      <li>Mailing address</li>
+      <li>Phone number</li>
+    </ul>
+    <p class="text">Users may also visit our site anonymously.</p>
+  </div>
+
+  <!-- Non Personal Info -->
+  <div class="card">
+    <div class="section-title">Non-personal identification information</div>
+    <p class="text">
+      We may collect non-personal information such as browser name, computer type, operating system, 
+      internet provider used, and similar technical details.
+    </p>
+  </div>
+
+  <!-- Cookies -->
+  <div class="card">
+    <div class="section-title">Web browser cookies</div>
+    <p class="text">
+      To know more about cookies please refer to our Cookie Policy.
+    </p>
+  </div>
+
+  <!-- Do Not Track -->
+  <div class="card">
+    <div class="section-title">“Do Not Track” signals</div>
+    <p class="text">
+      We do not collect identifying information without permission. We use Google Analytics.  
+      To learn more, visit:
+      <a class="link" href="https://www.google.com/analytics/terms/us.html" target="_blank">
+        Google Analytics Terms
+      </a>
+    </p>
+  </div>
+
+  <!-- Right to Access -->
+  <div class="card">
+    <div class="section-title">Right to access your data</div>
+    <p class="text">
+      If you are an EU citizen and want to exercise GDPR rights (Art. 15), contact us at:
+      <a class="link" href="https://senedriver.com" target="_blank">https://senedriver.com</a>
+    </p>
+  </div>
+
+  <!-- How we use info -->
+  <div class="card">
+    <div class="section-title">How we use collected information</div>
+    <ul>
+      <li>To improve customer service</li>
+      <li>To personalize user experience</li>
+      <li>To improve our Site using user feedback</li>
+      <li>To process payments securely</li>
+      <li>To send emails related to orders or updates</li>
+    </ul>
+  </div>
+
+  <!-- Security -->
+  <div class="card">
+    <div class="section-title">How we protect your information</div>
+    <p class="text">
+      We adopt secure storage, processing practices, encryption and SSL to protect your data.
+    </p>
+  </div>
+
+  <!-- Sharing -->
+  <div class="card">
+    <div class="section-title">Sharing your personal information</div>
+    <p class="text">
+      We do not sell or trade personal identification information.  
+      Only aggregated, non-identifiable data may be shared with partners.
+    </p>
+  </div>
+
+  <!-- Law & Harm -->
+  <div class="card">
+    <div class="section-title">Law and harm</div>
+    <p class="text">
+      We may disclose information if legally required, to protect safety, address fraud, 
+      or protect rights and property.
+    </p>
+  </div>
+
+  <!-- Right to be forgotten -->
+  <div class="card">
+    <div class="section-title">Right to be forgotten</div>
+    <p class="text">
+      You can request full account deletion through:
+      <a class="link" href="mailto:https://senedriver.com/">https://senedriver.com</a>.
+    </p>
+    <p class="text">
+      Deletion will permanently close your Metrix account and reimburse any stored funds per Refund Policy.
+    </p>
+  </div>
+
+  <!-- Changes -->
+  <div class="card">
+    <div class="section-title">Changes to this privacy policy</div>
+    <p class="text">
+      Metrix may update this policy anytime. Users are encouraged to review the page regularly.
+    </p>
+  </div>
+
+  <!-- Acceptance -->
+  <div class="card">
+    <div class="section-title">Your acceptance of these terms</div>
+    <p class="text">
+      By using this Site, you accept this policy. Continued use means acceptance of changes.
+    </p>
+  </div>
+
+  <!-- Account deletion process -->
+  <div class="card">
+    <div class="section-title">Account Deletion Process (App)</div>
+
+    <p class="text">Follow these steps to delete your Metrix account:</p>
+
+    <ul>
+      <li>Open the Metrix App</li>
+      <li>Go to “Settings”</li>
+      <li>Select “Delete My Account”</li>
+      <li>Enter your registered mobile number</li>
+      <li>Submit deletion request</li>
+    </ul>
+
+    <p class="text">
+      All your app data will be permanently erased.
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
